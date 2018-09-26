@@ -1,26 +1,26 @@
 # $Id$
 # Credits: Felix Yan <felixonmars@archlinux.org>
 
-_pkgver=2.18
+_pkgver=2.20
 _pkgname=libblockdev
 pkgname=libblockdev-minimal
-pkgver=1.0
+pkgver=2.20
 pkgrel=1
 pkgdesc="A library for manipulating block devices"
 arch=('x86_64')
 url="https://github.com/rhinstaller/libblockdev"
 license=('LGPL')
-depends=('dosfstools' 'gptfdisk' 'libbytesize' 'parted' 'kmod')
+depends=('dosfstools' 'gptfdisk' 'libbytesize' 'parted' 'kmod' 'volume_key')
 makedepends=('systemd' 'python')
 provides=('libblockdev')
 conflicts=('libblockdev')
 source=("$_pkgname-$_pkgver.tar.gz::https://github.com/rhinstaller/libblockdev/archive/$_pkgver-1.tar.gz")
-sha512sums=('c7837b0abb7747baf8dc2a21a0a75bc5fb80693a1685ddb310bf7d606d44ea65fa4c934cff6c09c5069806dea3ee056eb53c64122ec43b5c0485cdf92fda58d5')
+sha512sums=('4cb6b18d5de63461f35e0b6f6896599aa41da2c995839c2e88661dacdf07522842b612820fb1d83edbde72092cc62295d5411e8607f52c611db7f02aa16c9ab3')
 
 build() {
   cd "$srcdir"/$_pkgname-$_pkgver-1
   ./autogen.sh
-  ./configure --prefix=/usr --sysconfdir=/etc --without-lvm_dbus --without-dm --without-crypto --without-btrfs --without-lvm --disable-introspection --without-nvdimm --without-vdo 
+  ./configure --prefix=/usr --sysconfdir=/etc --without-lvm_dbus --without-dm --without-btrfs --without-lvm --disable-introspection --without-nvdimm --without-vdo 
   make
 }
 
