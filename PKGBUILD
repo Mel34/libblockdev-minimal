@@ -1,10 +1,10 @@
 # $Id$
 # Credits: Felix Yan <felixonmars@archlinux.org>
 
-_pkgver=2.22
+_pkgver=2.23
 _pkgname=libblockdev
 pkgname=libblockdev-minimal
-pkgver=2.22
+pkgver=$_pkgver
 pkgrel=1
 pkgdesc="A library for manipulating block devices"
 arch=('x86_64')
@@ -15,7 +15,7 @@ makedepends=('autoconf-archive' 'gobject-introspection' 'systemd' 'python')
 provides=('libblockdev')
 conflicts=('libblockdev')
 source=("$_pkgname-$_pkgver.tar.gz::https://github.com/rhinstaller/libblockdev/archive/$_pkgver-1.tar.gz")
-sha512sums=('43a826ad4d3fb350b251063d4a90108306bdfa5279db739fb7cab0cacaf5f958c68fe5f95d12d29e17ad9b391bcaa3ceebbf67cd3ae6edcc0e0a982a35cd6ba3')
+sha512sums=('e1e9976d24bdd8775310c9b25c31eb3b0e2d06a295b75f0c281def694104664f42abbbec307fbeb7c960ba5059299d0da66aa7afb26850c3640a8e73ea777aaf')
 
 build() {
   cd "$srcdir"/$_pkgname-$_pkgver-1
