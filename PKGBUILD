@@ -1,7 +1,7 @@
 # $Id$
 # Credits: Felix Yan <felixonmars@archlinux.org>
 
-_pkgver=2.23
+_pkgver=2.24
 _pkgname=libblockdev
 pkgname=libblockdev-minimal
 pkgver=$_pkgver
@@ -15,7 +15,7 @@ makedepends=('autoconf-archive' 'gobject-introspection' 'systemd' 'python')
 provides=('libblockdev')
 conflicts=('libblockdev')
 source=("$_pkgname-$_pkgver.tar.gz::https://github.com/rhinstaller/libblockdev/archive/$_pkgver-1.tar.gz")
-sha512sums=('e1e9976d24bdd8775310c9b25c31eb3b0e2d06a295b75f0c281def694104664f42abbbec307fbeb7c960ba5059299d0da66aa7afb26850c3640a8e73ea777aaf')
+sha512sums=('845d329bc43585a13ce021b9a1ec52d8790b7e8fbf378bde46247598ebf3f6bbb6c34ffa6b0570dfb50218278964bcf580ffa37c2f315daf63c425b326df55f1')
 
 build() {
   cd "$srcdir"/$_pkgname-$_pkgver-1
